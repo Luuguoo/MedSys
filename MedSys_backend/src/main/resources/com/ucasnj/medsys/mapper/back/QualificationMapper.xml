@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ucasnj.medsys.mapper.back.QualificationMapper">
+  <insert id="add">
+    insert into qualification  values (null,#{lname},#{pic},#{status},#{isDel})
+  </insert>
+  <update id="updateStatusById">
+    update qualification set status=#{checkResult} ,isDel=1  where id=#{id};
+  </update>
+  <select id="getByLname" resultType="com.ucasnj.medsys.domain.Qualification">
+    select * from qualification where lname =#{lname} and isDel=#{isDel}
+  </select>
+  <select id="list" resultType="com.ucasnj.medsys.domain.Qualification">
+    select * from qualification where isDel=#{isDel}
+  </select>
+  <select id="findById" resultType="com.ucasnj.medsys.domain.Qualification">
+     select * from qualification where id=#{id}
+  </select>
+</mapper>

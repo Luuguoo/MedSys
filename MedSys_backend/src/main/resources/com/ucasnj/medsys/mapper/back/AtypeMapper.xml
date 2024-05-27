@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ucasnj.medsys.mapper.back.AtypeMapper">
+    <select id="list" resultType="Atype">
+    select * from atype
+    </select>
+    <select id="findByTid" resultType="Atype">
+    select * from atype where tid = #{tid}
+    </select>
+
+    <delete id="del">
+        delete from atype where tid = #{tid}
+    </delete>
+    <insert id="add" parameterType="Atype">
+        insert into atype values (null,#{tname},#{isNeedVip})
+    </insert>
+    <update id="update" parameterType="Atype">
+        update atype set tname=#{tname},is_need_vip=#{isNeedVip} where tid=#{tid}
+    </update>
+</mapper>

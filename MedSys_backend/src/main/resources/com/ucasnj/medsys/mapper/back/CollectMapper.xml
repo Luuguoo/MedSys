@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ucasnj.medsys.mapper.back.CollectMapper">
+    <select id="list" resultType="Collect">
+    select * from collect where lname = #{lname}
+    </select>
+    <delete id="del">
+        delete from collect where id = #{id}
+    </delete>
+    <insert id="add" parameterType="Collect">
+        insert into collect values (null,#{aid},#{lname},#{addtime})
+    </insert>
+    <select id="findByAidAndLname" resultType="Collect">
+        select * from collect where lname = #{lname} and aid=#{aid}
+    </select>
+</mapper>

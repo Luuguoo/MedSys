@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ucasnj.medsys.mapper.back.DiscussMapper">
+    <select id="list" resultType="Discuss">
+    select * from discuss where lname like concat('%',#{lname},'%')
+    </select>
+    <select id="findByAid" resultType="Discuss">
+    select * from discuss where aid=#{aid}
+    </select>
+    <select id="findAllByLname" resultType="Discuss">
+    select * from discuss where lname=#{lname}
+    </select>
+
+    <delete id="del">
+        delete from discuss where id = #{id}
+    </delete>
+
+    <insert id="add" parameterType="Discuss">
+        insert into discuss values (null,#{aid},#{lname},#{dmemo},#{dtime})
+    </insert>
+</mapper>

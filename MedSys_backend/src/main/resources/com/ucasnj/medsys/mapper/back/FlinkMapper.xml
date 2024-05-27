@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ucasnj.medsys.mapper.back.FlinkMapper">
+    <select id="list" resultType="Flink">
+    select * from flink
+    </select>
+    <delete id="del">
+        delete from flink where id = #{id}
+    </delete>
+    <insert id="add" parameterType="Flink">
+        insert into flink values (null,#{title},#{http})
+    </insert>
+    <update id="update" parameterType="Flink">
+        update flink set title=#{title},http=#{http} where id=#{id}
+    </update>
+</mapper>

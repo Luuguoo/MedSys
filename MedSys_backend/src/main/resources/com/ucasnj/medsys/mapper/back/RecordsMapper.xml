@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ucasnj.medsys.mapper.back.RecordsMapper">
+
+    <select id="getReSou" resultType="Records">
+       SELECT  rname, COUNT(*) as count FROM `records` group by rname ORDER BY count desc
+    </select>
+    <insert id="add" parameterType="String">
+        insert into records values (null,#{name})
+    </insert>
+</mapper>

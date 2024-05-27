@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ucasnj.medsys.mapper.back.UsersMapper">
+    <select id="list" resultType="Users">
+    select * from users where lname like concat('%',#{lname},'%') and username like concat('%',#{username},'%')
+    </select>
+    <delete id="del">
+        delete from users where lname = #{lname}
+    </delete>
+    <insert id="add" parameterType="Users">
+        insert into users values (#{lname},#{password},#{username},#{sex},#{tel},#{pic},#{regdate},#{level})
+    </insert>
+    <select id="findUsersByTel" resultType="Users">
+        select * from users where tel = #{tel}
+    </select>
+    <select id="findUsersByLname" resultType="Users">
+        select pic from users where lname = #{lname}
+    </select>
+    <select id="findUsersAllByLname" resultType="Users">
+        select * from users where lname = #{lname}
+    </select>
+    <select id="findUsersLevelByLname" resultType="java.lang.Integer">
+         select level from users where lname = #{lname}
+    </select>
+    <update id="update" parameterType="Users">
+        update users set lname=#{lname},password=#{password},username=#{username},sex=#{sex},pic=#{pic} where tel=#{tel}
+    </update>
+    <update id="updatePass">
+        update users set password=#{pass} where lname=#{lname}
+    </update>
+    <update id="updateLevelByLname">
+         update users set level=1 where lname=#{lname}
+    </update>
+</mapper>

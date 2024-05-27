@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ucasnj.medsys.mapper.back.ArticleMapper">
+    <select id="list" resultType="Article">
+        select * from article where lname like concat('%',#{lname},'%') and title like concat('%',#{title},'%')
+        <if test="tid!=0">
+            and tid = #{tid}
+        </if>
+        <if test="flag!=null">
+            and flag = #{flag}
+        </if>
+    </select>
+    <select id="findAll" resultType="Article">
+        select * from article where flag = #{flag} and title like concat('%',#{title},'%')
+        <if test="tid!=0">
+            and tid = #{tid}
+        </if>
+        ORDER BY flag2 desc,(select level from users where users.lname=article.lname) desc
+    </select>
+    <select id="getAllByLname" resultType="Article">
+        select * from article where lname=#{lname}
+    </select>
+    <select id="findByAid" resultType="Article">
+        select * from article where aid=#{aid}
+    </select>
+    <select id="findByTid" resultType="Article">
+        select * from article where tid=#{tid} order by atime desc limit 4
+    </select>
+    <select id="getArticleTop6" resultType="Article">
+        select * from article where flag='审核通过' ORDER BY atime desc LIMIT 6
+    </select>
+
+    <delete id="del">
+        delete from article where aid = #{aid}
+    </delete>
+    <insert id="add" parameterType="Article">
+        insert into article values (null,#{tid},#{title},#{photo},#{amemo},#{lname},#{atime},#{flag},#{flag2})
+    </insert>
+    <update id="update" parameterType="Article">
+        update article set tid=#{tid},title=#{title},photo=#{photo},amemo=#{amemo} where aid=#{aid}
+    </update>
+    <update id="updateFlagByAid">
+        update article set flag=#{checkResult} where aid=#{aid}
+    </update>
+    <update id="updateAmemoByAid">
+        update article set amemo=#{xmemo} where aid=#{aid}
+    </update>
+
+
+</mapper>

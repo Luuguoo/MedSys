@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ucasnj.medsys.mapper.back.ApplysMapper">
+    <select id="list" resultType="Applys">
+        select * from applys where lname like concat('%',#{name},'%')
+        <if test="flag=='待审核'">
+            and flag = #{flag}
+        </if>
+        <if test="flag=='已审核'">
+            and (flag='审核通过' or flag='审核不通过')
+        </if>
+    </select>
+    <select id="findById" resultType="Applys">
+        select * from applys where id =#{id}
+    </select>
+    <select id="listByLname" resultType="Applys">
+        select * from applys where lname=#{lname}
+    </select>
+
+    <delete id="del">
+        delete from applys where id = #{id}
+    </delete>
+    <update id="updateFlagById">
+        update applys set flag=#{checkResult} where id=#{id}
+    </update>
+    <insert id="add" parameterType="Applys">
+        insert into applys  values (null,#{aid},#{lname},#{xmemo},#{atime},#{flag})
+    </insert>
+
+</mapper>
