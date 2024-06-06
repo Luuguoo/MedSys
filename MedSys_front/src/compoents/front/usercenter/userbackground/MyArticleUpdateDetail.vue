@@ -62,7 +62,7 @@
     },
     methods: {
       toList() {
-        this.$router.push('/frontHome/frontUserCenterUserbackgroundIndex/frontUserCenterUserbackgroundMyArticleUpdateList')
+        this.$router.push('/frontHome/frontusercenteruserbackgroundIndex/frontusercenteruserbackgroundMyArticleUpdateList')
       }
     },
     created() {

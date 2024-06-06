@@ -62,11 +62,10 @@
     },
     methods: {
       toList() {
-        this.$router.push('/backHome/backArticleRevisionAuditedList')
+        this.$router.push('/backHome/backarticlerevisionunauditedList')
       }
     },
     created() {
-      console.log(this.$route.query.applys)
       this.applys = JSON.parse(this.$route.query.applys)
     }
   }

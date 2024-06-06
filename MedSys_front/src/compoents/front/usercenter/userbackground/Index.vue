@@ -93,21 +93,21 @@
       },
       toPage(index) {
         if (index === 0) {
-          this.$router.push('/frontHome/frontUserCenterUserbackgroundIndex/frontUserCenterUserbackgroundUserInfo')
+          this.$router.push('/frontHome/frontusercenteruserbackgroundIndex/frontusercenteruserbackgroundUserInfo')
         } else if (index === 1) {
-          this.$router.push('/frontHome/frontUserCenterUserbackgroundIndex/frontUserCenterUserbackgroundPublicArticle')
+          this.$router.push('/frontHome/frontusercenteruserbackgroundIndex/frontusercenteruserbackgroundPublicArticle')
         } else if (index === 2) {
-          this.$router.push('/frontHome/frontUserCenterUserbackgroundIndex/frontUserCenterUserbackgroundMyArticle')
+          this.$router.push('/frontHome/frontusercenteruserbackgroundIndex/frontusercenteruserbackgroundMyArticle')
         } else if (index === 3) {
-          this.$router.push('/frontHome/frontUserCenterUserbackgroundIndex/frontUserCenterUserbackgroundMyArticleUpdateList')
+          this.$router.push('/frontHome/frontusercenteruserbackgroundIndex/frontusercenteruserbackgroundMyArticleUpdateList')
         } else if (index === 4) {
-          this.$router.push('/frontHome/frontUserCenterUserbackgroundIndex/frontUserCenterUserbackgroundMyDiscuss')
+          this.$router.push('/frontHome/frontusercenteruserbackgroundIndex/frontusercenteruserbackgroundMyDiscuss')
         } else if (index === 5) {
-          this.$router.push('/frontHome/frontUserCenterUserbackgroundIndex/frontUserCenterUserbackgroundMyCollect')
+          this.$router.push('/frontHome/frontusercenteruserbackgroundIndex/frontusercenteruserbackgroundMyCollect')
         } else if (index === 6) {
-          this.$router.push('/frontHome/frontUserCenterUserbackgroundIndex/frontUserCenterUserbackgroundUpdateUsers')
+          this.$router.push('/frontHome/frontusercenteruserbackgroundIndex/frontusercenteruserbackgroundUpdateUsers')
         } else if (index === 7) {
-          this.$router.push('/frontHome/frontUserCenterUserbackgroundIndex/frontUserCenterUserbackgroundUpdatePassword')
+          this.$router.push('/frontHome/frontusercenteruserbackgroundIndex/frontusercenteruserbackgroundUpdatePassword')
         } else if (index === 8) {
           this.logout()
         }

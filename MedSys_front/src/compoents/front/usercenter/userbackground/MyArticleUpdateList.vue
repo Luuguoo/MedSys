@@ -2,24 +2,18 @@
   <div>
     <el-card class="box-card" shadow="always" style="border-radius: 20px;">
       <div slot="header" class="clearfix">
-        <p align="left" style="font-size: 20px">已审核文章修改</p>
+        <p align="left" style="font-size: 20px">文章修改</p>
       </div>
       <div style="min-height: 600px">
         <el-row>
           <el-col :span="24">
-            <el-card>
-              <el-row :gutter="20">
-                <el-col :span="5">
-                  <el-input v-model="name" placeholder="用户名"></el-input>
-                </el-col>
-                <el-col :span="6">
-                  <el-button icon="el-icon-search" @click="paging(1)">搜索</el-button>
-                </el-col>
-              </el-row>
-            </el-card>
             <el-table :data="page.list" stripe style="width: 100%;">
-              <el-table-column prop="aid" label="文章ID" width=""></el-table-column>
-              <el-table-column prop="lname" label="用户名" width=""></el-table-column>
+              <el-table-column prop="article.title" label="文章标题" width=""></el-table-column>
+              <el-table-column label="图片" width="">
+                <template slot-scope="scope">
+                  <img :src="scope.row.article.photo" width="80px">
+                </template>
+              </el-table-column>
               <el-table-column prop="atime" label="提交时间" width=""></el-table-column>
               <el-table-column prop="flag" label="审核结果" width=""></el-table-column>
               <el-table-column label="操作">
@@ -52,20 +46,17 @@
       return {
         page: {},
         pageSize: 3,
-        name: '',
-        check:'已审核',
-        visible: [],
       }
     },
     methods: {
       paging(curPage) {
-        this.$axios.get('back/applys/list?curPage=' + curPage + '&check=' + this.check+ '&name=' + this.name + '&pageSize=' + this.pageSize)
+        this.$axios.get('front/protects/applys/list?curPage=' + curPage + '&pageSize=' + this.pageSize)
           .then(resp => {
             this.page = resp.data.data
           })
       },
-      toDetail(applys){
-        this.$router.push('/backHome/backArticleRevisionAuditedDetail?applys=' + JSON.stringify(applys))
+      toDetail(applys) {
+        this.$router.push('/frontHome/frontusercenteruserbackgroundIndex/frontusercenteruserbackgroundMyArticleUpdateDetail?applys=' + JSON.stringify(applys))
       },
       del(id) {
         this.$confirm('此操作将永久删除该文记录, 是否继续?', '提示', {
@@ -73,7 +64,7 @@
           cancelButtonText: '取消',
           type: 'warning'
         }).then(() => {
-          this.$axios.get('back/applys/del?id=' + id)
+          this.$axios.get('front/protects/applys/del?id=' + id)
             .then(resp => {
               if (resp.data.code === 1) {
                 this.$message({

@@ -2,28 +2,32 @@
   <div>
     <el-card class="box-card" shadow="always" style="border-radius: 20px;">
       <div slot="header" class="clearfix">
-        <p align="left" style="font-size: 20px">我的文章</p>
+        <p align="left" style="font-size: 20px">已审核文章修改</p>
       </div>
       <div style="min-height: 600px">
         <el-row>
           <el-col :span="24">
+            <el-card>
+              <el-row :gutter="20">
+                <el-col :span="5">
+                  <el-input v-model="name" placeholder="用户名"></el-input>
+                </el-col>
+                <el-col :span="6">
+                  <el-button icon="el-icon-search" @click="paging(1)">搜索</el-button>
+                </el-col>
+              </el-row>
+            </el-card>
             <el-table :data="page.list" stripe style="width: 100%;">
-              <!--<el-table-column prop="atype.tname" label="文章分类" width=""></el-table-column>-->
-              <el-table-column prop="title" label="文章标题" width=""></el-table-column>
-              <el-table-column label="文章图片">
-                <template slot-scope="scope">
-                  <img :src="scope.row.photo" width="80px">
-                </template>
-              </el-table-column>
-              <!--<el-table-column prop="lname" label="发布人" width=""></el-table-column>-->
-              <el-table-column prop="atime" label="发布时间" width=""></el-table-column>
-              <el-table-column prop="flag" label="审核状态" width=""></el-table-column>
-              <el-table-column>
+              <el-table-column prop="aid" label="文章ID" width=""></el-table-column>
+              <el-table-column prop="lname" label="用户名" width=""></el-table-column>
+              <el-table-column prop="atime" label="提交时间" width=""></el-table-column>
+              <el-table-column prop="flag" label="审核结果" width=""></el-table-column>
+              <el-table-column label="操作">
                 <template slot-scope="scope">
                   <el-button type="primary" icon="el-icon-more-outline" size="mini" circle
                              @click="toDetail(scope.row)"></el-button>
                   <el-button type="danger" icon="el-icon-delete" size="mini" circle
-                             @click="del(scope.row.aid)"></el-button>
+                             @click="del(scope.row.id)"></el-button>
                 </template>
               </el-table-column>
             </el-table>
@@ -48,25 +52,28 @@
       return {
         page: {},
         pageSize: 3,
+        name: '',
+        check:'已审核',
+        visible: [],
       }
     },
     methods: {
       paging(curPage) {
-        this.$axios.get('front/protects/article/list?curPage=' + curPage + '&pageSize=' + this.pageSize)
+        this.$axios.get('back/applys/list?curPage=' + curPage + '&check=' + this.check+ '&name=' + this.name + '&pageSize=' + this.pageSize)
           .then(resp => {
             this.page = resp.data.data
           })
       },
-      toDetail(article) {
-        this.$router.push('/frontHome/frontUserCenterUserbackgroundIndex/frontUserCenterUserbackgroundMyArticleDetail?article=' + JSON.stringify(article))
+      toDetail(applys){
+        this.$router.push('/backHome/backarticlerevisionauditedDetail?applys=' + JSON.stringify(applys))
       },
-      del(aid) {
+      del(id) {
         this.$confirm('此操作将永久删除该文记录, 是否继续?', '提示', {
           confirmButtonText: '确定',
           cancelButtonText: '取消',
           type: 'warning'
         }).then(() => {
-          this.$axios.get('front/protects/article/del?aid=' + aid)
+          this.$axios.get('back/applys/del?id=' + id)
             .then(resp => {
               if (resp.data.code === 1) {
                 this.$message({
@@ -77,7 +84,6 @@
                 this.$message.error(resp.data.msg);
               }
               this.paging(1)
-              // this.paging(this.page.pages==1?1:(this.page.pageNum==this.page.pages?this.page.pageNum-1:this.page.pageNum))
             })
 
         }).catch(() => {

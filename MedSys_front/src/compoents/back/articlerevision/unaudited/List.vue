@@ -71,7 +71,7 @@
           })
       },
       toDetail(applys){
-        this.$router.push('/backHome/backArticleRevisionUnauditedDetail?applys=' + JSON.stringify(applys))
+        this.$router.push('/backHome/backarticlerevisionunauditedDetail?applys=' + JSON.stringify(applys))
       },
       toCheck(id,checkResult){
         this.$axios.get('back/applys/check?id=' + id+'&checkResult='+checkResult)
