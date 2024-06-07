@@ -2,7 +2,7 @@ package com.ucasnj.medsys.controller.back;
 import com.ucasnj.medsys.domain.News;
 import com.ucasnj.medsys.domain.Users;
 import com.ucasnj.medsys.service.back.NewsService;
-import com.ucasnj.medsys.util.Result;
+import com.ucasnj.medsys.utils.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -15,6 +15,7 @@ import java.util.UUID;
 @RestController
 @CrossOrigin
 @RequestMapping("/back/news")
+//医学新闻管理
 public class NewsController {
     @Autowired
     private NewsService newsService;
@@ -29,6 +30,16 @@ public class NewsController {
         return newsService.del(id);
     }
 
+    @PostMapping("/update")
+    public Result update(News news){
+        try {
+            return newsService.update(news);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return Result.builder().code(2).msg("修改失败").build();
+        }
+    }
+
     @PostMapping("/add")
     public Result add(News news) {
         try {
@@ -37,16 +48,6 @@ public class NewsController {
         } catch (Exception e) {
             e.printStackTrace();
             return Result.builder().code(2).msg("添加失败").build();
-        }
-    }
-
-    @PostMapping("/update")
-    public Result update(News news){
-        try {
-            return newsService.update(news);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return Result.builder().code(2).msg("修改失败").build();
         }
     }
 }

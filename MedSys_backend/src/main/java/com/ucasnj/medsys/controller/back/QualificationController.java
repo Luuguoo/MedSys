@@ -2,7 +2,7 @@ package com.ucasnj.medsys.controller.back;
 
 import com.ucasnj.medsys.domain.Users;
 import com.ucasnj.medsys.service.back.QualificationService;
-import com.ucasnj.medsys.util.Result;
+import com.ucasnj.medsys.utils.Result;
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @CrossOrigin
 @RequestMapping("/back/qualification")
+//检查用户资格
 public class QualificationController {
 
   @Autowired
@@ -27,4 +28,5 @@ public class QualificationController {
   public Result check(Integer id, Integer checkResult,HttpServletRequest request) {
     return qualificationService.check(id, checkResult,request.getSession());
   }
+
 }

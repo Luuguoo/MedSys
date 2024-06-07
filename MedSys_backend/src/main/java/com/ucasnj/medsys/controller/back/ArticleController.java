@@ -3,7 +3,7 @@ package com.ucasnj.medsys.controller.back;
 import com.ucasnj.medsys.domain.Article;
 import com.ucasnj.medsys.domain.Users;
 import com.ucasnj.medsys.service.back.ArticleService;
-import com.ucasnj.medsys.util.Result;
+import com.ucasnj.medsys.utils.Result;
 import com.ucasnj.medsys.utils.ConstantUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -17,6 +17,7 @@ import java.util.UUID;
 @RestController
 @CrossOrigin
 @RequestMapping("/back/article")
+//处理与文章相关的请求操作
 public class ArticleController {
 
   @Autowired
@@ -38,6 +39,30 @@ public class ArticleController {
     return articleService.del(aid);
   }
 
+  @PostMapping("/update")
+  public Result update(Article article, MultipartFile tupian) {
+    if (tupian != null) {
+      File path = new File(ConstantUtils.imagePath + "upload/");
+      if (!path.exists()) {
+        path.mkdirs();
+      }
+      String filename = tupian.getOriginalFilename();
+      String exName = filename.substring(filename.lastIndexOf("."));
+      filename = UUID.randomUUID().toString().replaceAll("-", "") + exName;
+
+      File file = new File(path, filename);
+      try {
+        tupian.transferTo(file);
+        article.setPhoto("/upload/" + filename);
+      } catch (IOException e) {
+        e.printStackTrace();
+        return Result.builder().code(2).msg("修改失败").build();
+      }
+    } else {
+      article.setPhoto(article.getPhoto().substring(article.getPhoto().lastIndexOf("/upload")));
+    }
+    return articleService.update(article);
+  }
   @PostMapping("/add")
   public Result add(Article article, MultipartFile tupian) {
     File path = new File(ConstantUtils.imagePath + "upload/");
@@ -65,28 +90,4 @@ public class ArticleController {
     }
   }
 
-  @PostMapping("/update")
-  public Result update(Article article, MultipartFile tupian) {
-    if (tupian != null) {
-      File path = new File(ConstantUtils.imagePath + "upload/");
-      if (!path.exists()) {
-        path.mkdirs();
-      }
-      String filename = tupian.getOriginalFilename();
-      String exName = filename.substring(filename.lastIndexOf("."));
-      filename = UUID.randomUUID().toString().replaceAll("-", "") + exName;
-
-      File file = new File(path, filename);
-      try {
-        tupian.transferTo(file);
-        article.setPhoto("/upload/" + filename);
-      } catch (IOException e) {
-        e.printStackTrace();
-        return Result.builder().code(2).msg("修改失败").build();
-      }
-    } else {
-      article.setPhoto(article.getPhoto().substring(article.getPhoto().lastIndexOf("/upload")));
-    }
-    return articleService.update(article);
-  }
 }

@@ -2,7 +2,7 @@ package com.ucasnj.medsys.controller.back;
 import com.ucasnj.medsys.domain.Atype;
 import com.ucasnj.medsys.domain.News;
 import com.ucasnj.medsys.service.back.AtypeService;
-import com.ucasnj.medsys.util.Result;
+import com.ucasnj.medsys.utils.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,6 +11,7 @@ import java.util.Date;
 @RestController
 @CrossOrigin
 @RequestMapping("/back/atype")
+//文章分类管理
 public class AtypeController {
     @Autowired
     private AtypeService atypeService;
@@ -20,6 +21,10 @@ public class AtypeController {
         return atypeService.list(curPage, pageSize);
     }
 
+    @GetMapping("findAll")
+    public Result findAll(){
+        return atypeService.findAll();
+    }
     @GetMapping("/del")
     public Result del(Integer tid) {
         return atypeService.del(tid);
@@ -45,8 +50,5 @@ public class AtypeController {
         }
     }
 
-    @GetMapping("findAll")
-    public Result findAll(){
-        return atypeService.findAll();
-    }
+
 }

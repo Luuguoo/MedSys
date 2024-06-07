@@ -2,7 +2,7 @@ package com.ucasnj.medsys.controller.back;
 
 import com.ucasnj.medsys.domain.Admin;
 import com.ucasnj.medsys.service.back.LoginService;
-import com.ucasnj.medsys.util.Result;
+import com.ucasnj.medsys.utils.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,6 +12,7 @@ import javax.servlet.http.HttpSession;
 @RestController
 @CrossOrigin
 @RequestMapping("/back")
+//后台登录
 public class LoginController {
   @Autowired private LoginService loginService;
 

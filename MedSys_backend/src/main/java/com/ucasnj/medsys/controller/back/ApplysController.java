@@ -11,22 +11,25 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @CrossOrigin
 @RequestMapping("/back/applys")
+//文章修改申请
 public class ApplysController {
   @Autowired private ApplysService applysService;
+
+  @GetMapping("/del")
+  public Result del(String id) {
+    return applysService.del(id);
+  }
 
   @GetMapping("/list")
   public Result list(Integer curPage, String name, String check, Integer pageSize) {
     System.out.println("check = " + check);
     return applysService.list(curPage, name, check, pageSize);
   }
-
-  @GetMapping("/del")
-  public Result del(String id) {
-    return applysService.del(id);
-  }
   @GetMapping("/check")
   public Result check(Integer id,String checkResult){
     return applysService.updateFlagById(id,checkResult);
   }
+
+
 
 }
