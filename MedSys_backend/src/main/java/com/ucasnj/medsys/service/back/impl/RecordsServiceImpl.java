@@ -5,7 +5,7 @@ import com.ucasnj.medsys.domain.Users;
 import com.ucasnj.medsys.mapper.back.RecordsMapper;
 import com.ucasnj.medsys.mapper.back.UsersMapper;
 import com.ucasnj.medsys.service.back.RecordsService;
-import com.ucasnj.medsys.util.Result;
+import com.ucasnj.medsys.utils.Result;
 import com.ucasnj.medsys.utils.ConstantUtils;
 import com.ucasnj.medsys.utils.OutExcle;
 import javax.servlet.http.HttpServletRequest;

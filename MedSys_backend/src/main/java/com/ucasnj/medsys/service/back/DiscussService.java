@@ -1,7 +1,7 @@
 package com.ucasnj.medsys.service.back;
 import com.ucasnj.medsys.domain.Discuss;
 import com.ucasnj.medsys.domain.Users;
-import com.ucasnj.medsys.util.Result;
+import com.ucasnj.medsys.utils.Result;
 
 public interface DiscussService {
     Result list(Integer curPage, String name, Integer pageSize);

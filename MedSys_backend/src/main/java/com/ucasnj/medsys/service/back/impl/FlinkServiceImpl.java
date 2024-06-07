@@ -6,7 +6,7 @@ import com.ucasnj.medsys.domain.Flink;
 import com.ucasnj.medsys.domain.News;
 import com.ucasnj.medsys.mapper.back.FlinkMapper;
 import com.ucasnj.medsys.service.back.FlinkService;
-import com.ucasnj.medsys.util.Result;
+import com.ucasnj.medsys.utils.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

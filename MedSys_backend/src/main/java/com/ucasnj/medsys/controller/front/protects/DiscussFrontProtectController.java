@@ -4,7 +4,7 @@ import com.ucasnj.medsys.domain.Discuss;
 import com.ucasnj.medsys.domain.Users;
 import com.ucasnj.medsys.service.back.ApplysService;
 import com.ucasnj.medsys.service.back.DiscussService;
-import com.ucasnj.medsys.util.Result;
+import com.ucasnj.medsys.utils.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

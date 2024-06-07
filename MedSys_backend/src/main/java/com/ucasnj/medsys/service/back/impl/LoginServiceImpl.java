@@ -3,7 +3,7 @@ package com.ucasnj.medsys.service.back.impl;
 import com.ucasnj.medsys.domain.Admin;
 import com.ucasnj.medsys.mapper.back.LoginMapper;
 import com.ucasnj.medsys.service.back.LoginService;
-import com.ucasnj.medsys.util.Result;
+import com.ucasnj.medsys.utils.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

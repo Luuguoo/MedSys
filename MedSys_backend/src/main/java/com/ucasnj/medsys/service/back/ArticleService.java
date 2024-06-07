@@ -1,6 +1,6 @@
 package com.ucasnj.medsys.service.back;
 import com.ucasnj.medsys.domain.Article;
-import com.ucasnj.medsys.util.Result;
+import com.ucasnj.medsys.utils.Result;
 
 public interface ArticleService {
     Result list(Integer curPage,String flag, Integer tid, String title, String lname, Integer pageSize);

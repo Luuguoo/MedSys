@@ -1,7 +1,7 @@
 package com.ucasnj.medsys.service.back;
 
 import com.ucasnj.medsys.domain.Qualification;
-import com.ucasnj.medsys.util.Result;
+import com.ucasnj.medsys.utils.Result;
 import javax.servlet.http.HttpSession;
 
 /**

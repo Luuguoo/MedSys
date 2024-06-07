@@ -7,7 +7,7 @@ import com.ucasnj.medsys.domain.Users;
 import com.ucasnj.medsys.service.back.QualificationService;
 import com.ucasnj.medsys.service.back.RecordsService;
 import com.ucasnj.medsys.service.back.UsersService;
-import com.ucasnj.medsys.util.Result;
+import com.ucasnj.medsys.utils.Result;
 import com.ucasnj.medsys.utils.ConstantUtils;
 import java.io.File;
 import java.io.IOException;

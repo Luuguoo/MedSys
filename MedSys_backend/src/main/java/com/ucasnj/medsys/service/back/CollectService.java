@@ -1,5 +1,5 @@
 package com.ucasnj.medsys.service.back;
-import com.ucasnj.medsys.util.Result;
+import com.ucasnj.medsys.utils.Result;
 
 public interface CollectService {
     Result list(Integer curPage, String lname, Integer pageSize);

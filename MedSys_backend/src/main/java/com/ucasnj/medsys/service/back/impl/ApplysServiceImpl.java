@@ -7,7 +7,7 @@ import com.ucasnj.medsys.domain.Article;
 import com.ucasnj.medsys.mapper.back.ApplysMapper;
 import com.ucasnj.medsys.mapper.back.ArticleMapper;
 import com.ucasnj.medsys.service.back.ApplysService;
-import com.ucasnj.medsys.util.Result;
+import com.ucasnj.medsys.utils.Result;
 import com.ucasnj.medsys.utils.ConstantUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

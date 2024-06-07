@@ -1,0 +1,17 @@
+spring:
+  datasource:
+#    开发版本使用的数据库
+
+    url: jdbc:mysql://localhost:3306/medsys?serverTimezone=GMT%2B8&characterEncoding=UTF-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+#    password: 123456
+    password: luguo
+mybatis:
+#  mapper-locations: classpath:mapping/*Mapper.xml
+  type-aliases-package: com.ucasnj.medsys.domain
+  configuration:
+    map-underscore-to-camel-case: true
+
+server:
+  port: 8088

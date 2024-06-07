@@ -8,7 +8,7 @@ import com.ucasnj.medsys.mapper.back.ArticleMapper;
 import com.ucasnj.medsys.mapper.back.AtypeMapper;
 import com.ucasnj.medsys.mapper.back.UsersMapper;
 import com.ucasnj.medsys.service.back.ArticleService;
-import com.ucasnj.medsys.util.Result;
+import com.ucasnj.medsys.utils.Result;
 import com.ucasnj.medsys.utils.ConstantUtils;
 import java.util.Comparator;
 import org.springframework.beans.factory.annotation.Autowired;
