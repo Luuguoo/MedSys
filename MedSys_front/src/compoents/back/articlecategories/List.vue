@@ -50,7 +50,7 @@
           })
       },
       update(atype) {
-        this.$router.push('/backHome/backarticle_categoriesUpdate?atype=' + JSON.stringify(atype))
+        this.$router.push('/backHome/backarticlecategoriesUpdate?atype=' + JSON.stringify(atype))
       },
       del(tid) {
         this.$confirm('此操作将永久删除该文记录, 是否继续?', '提示', {

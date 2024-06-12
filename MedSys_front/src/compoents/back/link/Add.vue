@@ -2,27 +2,19 @@
   <div>
     <el-card class="box-card" shadow="always" style="border-radius: 20px;">
       <div slot="header" class="clearfix">
-        <p align="left" style="font-size: 20px">修改医学新闻信息</p>
+        <p align="left" style="font-size: 20px">添加友情链接信息</p>
       </div>
       <div style="min-height: 600px">
-        <el-form ref="form" :model="atype" :rules="rules" label-width="100px" label-position="right" size="mini">
-          <el-form-item label="类别名称" prop="tname">
-            <el-input v-model="atype.tname"></el-input>
+        <el-form ref="form" :model="flink" :rules="rules" label-width="100px" label-position="right" size="mini">
+          <el-form-item label="网站名称" prop="title">
+            <el-input v-model="flink.title"></el-input>
           </el-form-item>
-          <el-form-item label="是否需要vip特权" prop="isNeedVip">
-            <el-select v-model="atype.isNeedVip" placeholder="请选择">
-              <el-option
-                v-for="item in vipTypeDict"
-                :key="item.id"
-                :label="item.name"
-                :value="item.id">
-              </el-option>
-            </el-select>
+          <el-form-item label="网址" prop="http">
+            <el-input v-model="flink.http"></el-input>
           </el-form-item>
         </el-form>
         <div slot="footer" class="dialog-footer">
           <el-button type="primary" @click="save" size="mini">确定</el-button>
-          <el-button type="warning" @click="toList" size="mini">返回</el-button>
         </div>
       </div>
     </el-card>
@@ -34,29 +26,31 @@
   export default {
     data() {
       return {
-        vipTypeDict: [
-          {id: 0, name: '否'},
-          {id: 1, name: '是'}
-        ],
-        atype: {},
+        flink: {},
         rules: {
-          tname: [
+          title: [
             {
               required: true,
-              message: '请输入类别名称',
+              message: '请输入网站名称',
               trigger: 'blur'
             },
             {
-              min: 4,
+              min: 1,
               max: 20,
-              message: '类别名称长度在4到20字符之间',
+              message: '网站名称长度在1到20字符之间',
               trigger: 'blur'
             }
           ],
-          isNeedVip: [
+          http: [
             {
               required: true,
-              message: '请选择',
+              message: '请输入网址',
+              trigger: 'blur'
+            },
+            {
+              min: 1,
+              max: 500,
+              message: '网址长度在1到500字符之间',
               trigger: 'blur'
             }
           ]
@@ -64,25 +58,22 @@
       }
     },
     methods: {
-      toList(){
-        this.$router.push('/backHome/backarticle_categoriesList')
-      },
       // 提交
       save() {
         this.$refs.form.validate((valid) => {
           if (valid) {
             var formData = new FormData()
-            Object.keys(this.atype).forEach(key => {
-              formData.append(key, this.atype[key])
+            Object.keys(this.flink).forEach(key => {
+              formData.append(key, this.flink[key])
             })
-            this.$axios.post('back/atype/update', formData)
+            this.$axios.post('back/flink/add', formData)
               .then(resp => {
                 if (resp.data.code === 1) {
                   this.$message({
                     message: resp.data.msg,
                     type: 'success'
                   });
-                  this.$router.push('/backHome/backarticle_categoriesList')
+                  this.$router.push('/backHome/backlinkList')
                 } else if (resp.data.code === 2) {
                   this.$message.error(resp.data.msg);
                 }
@@ -93,9 +84,6 @@
           }
         })
       }
-    },
-    created() {
-      this.atype = JSON.parse(this.$route.query.atype)
     }
   }
 </script>
