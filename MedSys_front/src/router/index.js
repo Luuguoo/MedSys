@@ -1,62 +1,62 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import BackLogin from '../components/back/Login'
-import BackHome from '../components/back/Home'
-import BackWelcome from '../components/back/Welcome'
-import BackYonghuAdd from '../components/back/user/Add'
-import BackYonghuList from '../components/back/user/List'
-import BackYonghuQualificationList from '../components/back/user/qualificationList'
-import BackYonghuUpdate from '../components/back/user/Update'
-import BackyixuexinwenAdd from '../components/back/medicalnews/Add'
-import BackyixuexinwenDetail from '../components/back/medicalnews/Detail'
-import BackyixuexinwenList from '../components/back/medicalnews/List'
-import BackyixuexinwenUpdate from '../components/back/medicalnews/Update'
-import Backarticle_categoriesAdd from '../components/back/articlecategories/Add'
-import Backarticle_categoriesList from '../components/back/articlecategories/List'
-import Backarticle_categoriesUpdate from '../components/back/articlecategories/Update'
-import BackarticleAdd from '../components/back/article/Add'
-import BackarticleDetail from '../components/back/article/Detail'
-import BackarticleList from '../components/back/article/List'
-import BackarticleUpdate from '../components/back/article/Update'
-import BackarticleCheck from '../components/back/article/Check'
-import BackyouqinglianjieAdd from '../components/back/link/Add'
-import BackyouqinglianjieList from '../components/back/link/List'
-import BackyouqinglianjieUpdate from '../components/back/link/Update'
-import BackwenzhangpinglunList from '../components/back/articlereview/List'
-import BackwenzhangxiugaiweishenheList from '../components/back/articlerevision/unaudited/List'
-import BackwenzhangxiugaiweishenheDetail from '../components/back/articlerevision/unaudited/Detail'
-import BackwenzhangxiugaiyishenheList from '../components/back/articlerevision/audited/List'
-import BackwenzhangxiugaiyishenheDetail from '../components/back/articlerevision/audited/Detail'
-import BackxitongUpdate from '../components/back/system/Update'
-import FrontHome from '../components/front/Home'
-import FrontIndex from '../components/front/Index'
-import FrontInfo from '../components/front/Info'
-import FrontyixuexinwenList from '../components/front/fmedicalnews/List'
-import FrontyixuexinwenDetail from '../components/front/fmedicalnews/Detail'
-import FrontwenzhangList from '../components/front/farticle/List'
-import FrontwenzhangDetail from '../components/front/farticle/Detail'
-import FrontyonghuzhongxinRegister from '../components/front/usercenter/Register'
-import FrontyonghuzhongxinLogin from '../components/front/usercenter/Login'
-import FrontyonghuzhongxinyonghuhoutaiIndex from '../components/front/usercenter/userbackground/Index'
-import FrontyonghuzhongxinyonghuhoutaiUserInfo from '../components/front/usercenter/userbackground/UserInfo'
-import FrontyonghuzhongxinyonghuhoutaiPublicArticle from '../components/front/usercenter/userbackground/PublicArticle'
-import FrontyonghuzhongxinyonghuhoutaiMyArticle from '../components/front/usercenter/userbackground/MyArticle'
-import FrontyonghuzhongxinyonghuhoutaiMyArticleDetail
-  from '../components/front/usercenter/userbackground/MyArticleDetail'
-import FrontyonghuzhongxinyonghuhoutaiMyArticleUpdateList
-  from '../components/front/usercenter/userbackground/MyArticleUpdateList'
-import FrontyonghuzhongxinyonghuhoutaiMyArticleUpdateDetail
-  from '../components/front/usercenter/userbackground/MyArticleUpdateDetail'
-import FrontyonghuzhongxinyonghuhoutaiMyDiscuss
-  from '../components/front/usercenter/userbackground/MyDiscuss'
-import FrontyonghuzhongxinyonghuhoutaiMyCollect
-  from '../components/front/usercenter/userbackground/MyCollect'
-import FrontyonghuzhongxinyonghuhoutaiUpdateUsers
-  from '../components/front/usercenter/userbackground/UpdateUsers'
-import FrontyonghuzhongxinyonghuhoutaiUpdatePassword
-  from '../components/front/usercenter/userbackground/UpdatePassword'
-import FrontyonghuzhongxinyonghuhoutaiUpdateArticle
-  from '../components/front/usercenter/userbackground/UpdateArticle'
+import BackLogin from '../compoents/back/Login'
+import BackHome from '../compoents/back/Home'
+import BackWelcome from '../compoents/back/Welcome'
+import BackUserAdd from '../compoents/back/user/Add'
+import BackUserList from '../compoents/back/user/List'
+import BackUserQualificationList from '../compoents/back/user/qualificationList'
+import BackUserUpdate from '../compoents/back/user/Update'
+import BackmedicalnewsAdd from '../compoents/back/medicalnews/Add'
+import BackmedicalnewsDetail from '../compoents/back/medicalnews/Detail'
+import BackmedicalnewsList from '../compoents/back/medicalnews/List'
+import BackmedicalnewsUpdate from '../compoents/back/medicalnews/Update'
+import BackarticlecategoriesAdd from '../compoents/back/articlecategories/Add'
+import BackarticlecategoriesList from '../compoents/back/articlecategories/List'
+import BackarticlecategoriesUpdate from '../compoents/back/articlecategories/Update'
+import BackarticleAdd from '../compoents/back/article/Add'
+import BackarticleDetail from '../compoents/back/article/Detail'
+import BackarticleList from '../compoents/back/article/List'
+import BackarticleUpdate from '../compoents/back/article/Update'
+import BackarticleCheck from '../compoents/back/article/Check'
+import BacklinkAdd from '../compoents/back/link/Add'
+import BacklinkList from '../compoents/back/link/List'
+import BacklinkUpdate from '../compoents/back/link/Update'
+import BackarticlereviewList from '../compoents/back/articlereview/List'
+import BackarticlerevisionunauditedList from '../compoents/back/articlerevision/unaudited/List'
+import BackarticlerevisionunauditedDetail from '../compoents/back/articlerevision/unaudited/Detail'
+import BackarticlerevisionauditedList from '../compoents/back/articlerevision/audited/List'
+import BackarticlerevisionauditedDetail from '../compoents/back/articlerevision/audited/Detail'
+import BacksystemUpdate from '../compoents/back/system/Update'
+import FrontHome from '../compoents/front/Home'
+import FrontIndex from '../compoents/front/Index'
+import FrontInfo from '../compoents/front/Info'
+import FrontfmedicalnewsList from '../compoents/front/fmedicalnews/List'
+import FrontfmedicalnewsDetail from '../compoents/front/fmedicalnews/Detail'
+import FrontfarticleList from '../compoents/front/farticle/List'
+import FrontfarticleDetail from '../compoents/front/farticle/Detail'
+import FrontusercenterRegister from '../compoents/front/usercenter/Register'
+import FrontusercenterLogin from '../compoents/front/usercenter/Login'
+import FrontusercenteruserbackgroundIndex from '../compoents/front/usercenter/userbackground/Index'
+import FrontusercenteruserbackgroundUserInfo from '../compoents/front/usercenter/userbackground/UserInfo'
+import FrontusercenteruserbackgroundPublicArticle from '../compoents/front/usercenter/userbackground/PublicArticle'
+import FrontusercenteruserbackgroundMyArticle from '../compoents/front/usercenter/userbackground/MyArticle'
+import FrontusercenteruserbackgroundMyArticleDetail
+  from '../compoents/front/usercenter/userbackground/MyArticleDetail'
+import FrontusercenteruserbackgroundMyArticleUpdateList
+  from '../compoents/front/usercenter/userbackground/MyArticleUpdateList'
+import FrontusercenteruserbackgroundMyArticleUpdateDetail
+  from '../compoents/front/usercenter/userbackground/MyArticleUpdateDetail'
+import FrontusercenteruserbackgroundMyDiscuss
+  from '../compoents/front/usercenter/userbackground/MyDiscuss'
+import FrontusercenteruserbackgroundMyCollect
+  from '../compoents/front/usercenter/userbackground/MyCollect'
+import FrontusercenteruserbackgroundUpdateUsers
+  from '../compoents/front/usercenter/userbackground/UpdateUsers'
+import FrontusercenteruserbackgroundUpdatePassword
+  from '../compoents/front/usercenter/userbackground/UpdatePassword'
+import FrontusercenteruserbackgroundUpdateArticle
+  from '../compoents/front/usercenter/userbackground/UpdateArticle'
 
 Vue.use(Router)
 
@@ -91,131 +91,131 @@ const router = new Router({
           component: FrontInfo,
           children: [
             {
-              path: 'frontyixuexinwenList',
-              name: 'FrontyixuexinwenList',
-              component: FrontyixuexinwenList
+              path: 'frontmedicalnewsList',
+              name: 'FrontfmedicalnewsList',
+              component: FrontfmedicalnewsList
             },
             {
-              path: 'frontyixuexinwenDetail',
-              name: 'FrontyixuexinwenDetail',
-              component: FrontyixuexinwenDetail
+              path: 'frontmedicalnewsDetail',
+              name: 'FrontfmedicalnewsDetail',
+              component: FrontfmedicalnewsDetail
             },
             {
-              path: 'frontwenzhangList',
-              name: 'FrontwenzhangList',
-              component: FrontwenzhangList
+              path: 'frontfarticleList',
+              name: 'FrontfarticleList',
+              component: FrontfarticleList
             },
             {
-              path: 'FrontwenzhangDetail',
-              name: 'FrontwenzhangDetail',
-              component: FrontwenzhangDetail
+              path: 'FrontfarticleDetail',
+              name: 'FrontfarticleDetail',
+              component: FrontfarticleDetail
             },
             {
-              path: 'frontyonghuzhongxinRegister',
-              name: 'FrontyonghuzhongxinRegister',
-              component: FrontyonghuzhongxinRegister
+              path: 'frontusercenterRegister',
+              name: 'FrontusercenterRegister',
+              component: FrontusercenterRegister
             },
             {
-              path: 'frontyonghuzhongxinLogin',
-              name: 'FrontyonghuzhongxinLogin',
-              component: FrontyonghuzhongxinLogin
+              path: 'frontusercenterLogin',
+              name: 'FrontusercenterLogin',
+              component: FrontusercenterLogin
             },
 
           ]
         },
         {
-          path: 'frontyonghuzhongxinyonghuhoutaiIndex',
-          name: 'FrontyonghuzhongxinyonghuhoutaiIndex',
-          component: FrontyonghuzhongxinyonghuhoutaiIndex,
+          path: 'frontusercenteruserbackgroundIndex',
+          name: 'FrontusercenteruserbackgroundIndex',
+          component: FrontusercenteruserbackgroundIndex,
           children: [
             {
               path: '/',
-              redirect: 'frontyonghuzhongxinyonghuhoutaiUserInfo'
+              redirect: 'frontusercenteruserbackgroundUserInfo'
             },
             {
-              path: 'frontyonghuzhongxinyonghuhoutaiUserInfo',
-              name: 'FrontyonghuzhongxinyonghuhoutaiUserInfo',
-              component: FrontyonghuzhongxinyonghuhoutaiUserInfo,
+              path: 'frontusercenteruserbackgroundUserInfo',
+              name: 'FrontusercenteruserbackgroundUserInfo',
+              component: FrontusercenteruserbackgroundUserInfo,
               meta: {
                 user: true//添加字段判断该页面是否需要登录
               },
             },
             {
-              path: 'frontyonghuzhongxinyonghuhoutaiPublicArticle',
-              name: 'FrontyonghuzhongxinyonghuhoutaiPublicArticle',
-              component: FrontyonghuzhongxinyonghuhoutaiPublicArticle,
+              path: 'frontusercenteruserbackgroundPublicArticle',
+              name: 'FrontusercenteruserbackgroundPublicArticle',
+              component: FrontusercenteruserbackgroundPublicArticle,
               meta: {
                 user: true//添加字段判断该页面是否需要登录
               },
             },
             {
-              path: 'frontyonghuzhongxinyonghuhoutaiMyArticle',
-              name: 'FrontyonghuzhongxinyonghuhoutaiMyArticle',
-              component: FrontyonghuzhongxinyonghuhoutaiMyArticle,
+              path: 'frontusercenteruserbackgroundMyArticle',
+              name: 'FrontusercenteruserbackgroundMyArticle',
+              component: FrontusercenteruserbackgroundMyArticle,
               meta: {
                 user: true//添加字段判断该页面是否需要登录
               },
             },
             {
-              path: 'frontyonghuzhongxinyonghuhoutaiMyArticleDetail',
-              name: 'FrontyonghuzhongxinyonghuhoutaiMyArticleDetail',
-              component: FrontyonghuzhongxinyonghuhoutaiMyArticleDetail,
+              path: 'frontusercenteruserbackgroundMyArticleDetail',
+              name: 'FrontusercenteruserbackgroundMyArticleDetail',
+              component: FrontusercenteruserbackgroundMyArticleDetail,
               meta: {
                 user: true//添加字段判断该页面是否需要登录
               },
             },
             {
-              path: 'frontyonghuzhongxinyonghuhoutaiMyArticleUpdateList',
-              name: 'FrontyonghuzhongxinyonghuhoutaiMyArticleUpdateList',
-              component: FrontyonghuzhongxinyonghuhoutaiMyArticleUpdateList,
+              path: 'frontusercenteruserbackgroundMyArticleUpdateList',
+              name: 'FrontusercenteruserbackgroundMyArticleUpdateList',
+              component: FrontusercenteruserbackgroundMyArticleUpdateList,
               meta: {
                 user: true//添加字段判断该页面是否需要登录
               },
             },
             {
-              path: 'frontyonghuzhongxinyonghuhoutaiMyArticleUpdateDetail',
-              name: 'FrontyonghuzhongxinyonghuhoutaiMyArticleUpdateDetail',
-              component: FrontyonghuzhongxinyonghuhoutaiMyArticleUpdateDetail,
+              path: 'frontusercenteruserbackgroundMyArticleUpdateDetail',
+              name: 'FrontusercenteruserbackgroundMyArticleUpdateDetail',
+              component: FrontusercenteruserbackgroundMyArticleUpdateDetail,
               meta: {
                 user: true//添加字段判断该页面是否需要登录
               },
             },
             {
-              path: 'frontyonghuzhongxinyonghuhoutaiMyDiscuss',
-              name: 'FrontyonghuzhongxinyonghuhoutaiMyDiscuss',
-              component: FrontyonghuzhongxinyonghuhoutaiMyDiscuss,
+              path: 'frontusercenteruserbackgroundMyDiscuss',
+              name: 'FrontusercenteruserbackgroundMyDiscuss',
+              component: FrontusercenteruserbackgroundMyDiscuss,
               meta: {
                 user: true//添加字段判断该页面是否需要登录
               },
             },
             {
-              path: 'frontyonghuzhongxinyonghuhoutaiMyCollect',
-              name: 'FrontyonghuzhongxinyonghuhoutaiMyCollect',
-              component: FrontyonghuzhongxinyonghuhoutaiMyCollect,
+              path: 'frontusercenteruserbackgroundMyCollect',
+              name: 'FrontusercenteruserbackgroundMyCollect',
+              component: FrontusercenteruserbackgroundMyCollect,
               meta: {
                 user: true//添加字段判断该页面是否需要登录
               },
             },
             {
-              path: 'frontyonghuzhongxinyonghuhoutaiUpdateUsers',
-              name: 'FrontyonghuzhongxinyonghuhoutaiUpdateUsers',
-              component: FrontyonghuzhongxinyonghuhoutaiUpdateUsers,
+              path: 'frontusercenteruserbackgroundUpdateUsers',
+              name: 'FrontusercenteruserbackgroundUpdateUsers',
+              component: FrontusercenteruserbackgroundUpdateUsers,
               meta: {
                 user: true//添加字段判断该页面是否需要登录
               },
             },
             {
-              path: 'frontyonghuzhongxinyonghuhoutaiUpdatePassword',
-              name: 'FrontyonghuzhongxinyonghuhoutaiUpdatePassword',
-              component: FrontyonghuzhongxinyonghuhoutaiUpdatePassword,
+              path: 'frontusercenteruserbackgroundUpdatePassword',
+              name: 'FrontusercenteruserbackgroundUpdatePassword',
+              component: FrontusercenteruserbackgroundUpdatePassword,
               meta: {
                 user: true//添加字段判断该页面是否需要登录
               },
             },
             {
-              path: 'frontyonghuzhongxinyonghuhoutaiUpdateArticle',
-              name: 'FrontyonghuzhongxinyonghuhoutaiUpdateArticle',
-              component: FrontyonghuzhongxinyonghuhoutaiUpdateArticle,
+              path: 'frontusercenteruserbackgroundUpdateArticle',
+              name: 'FrontusercenteruserbackgroundUpdateArticle',
+              component: FrontusercenteruserbackgroundUpdateArticle,
               meta: {
                 user: true//添加字段判断该页面是否需要登录
               },
@@ -244,89 +244,89 @@ const router = new Router({
           }
         },
         {
-          path: 'backYonghuUpdate',
-          name: 'BackYonghuUpdate',
-          component: BackYonghuUpdate,
+          path: 'backUserUpdate',
+          name: 'BackUserUpdate',
+          component: BackUserUpdate,
           meta: {
             auth: true//添加字段判断该页面是否需要登录
           }
         },
         {
-          path: 'backYonghuList',
-          name: 'BackYonghuList',
-          component: BackYonghuList,
+          path: 'backUserList',
+          name: 'BackUserList',
+          component: BackUserList,
           meta: {
             auth: true//添加字段判断该页面是否需要登录
           }
         },
         {
-          path: 'backYonghuQualificationList',
-          name: 'BackYonghuQualificationList',
-          component: BackYonghuQualificationList,
+          path: 'backUserQualificationList',
+          name: 'BackUserQualificationList',
+          component: BackUserQualificationList,
           meta: {
             auth: true//添加字段判断该页面是否需要登录
           }
         },
         {
-          path: 'backYonghuAdd',
-          name: 'BackYonghuAdd',
-          component: BackYonghuAdd,
+          path: 'backUserAdd',
+          name: 'BackUserAdd',
+          component: BackUserAdd,
           meta: {
             auth: true//添加字段判断该页面是否需要登录
           }
         },
         {
-          path: 'backyixuexinwenUpdate',
-          name: 'BackyixuexinwenUpdate',
-          component: BackyixuexinwenUpdate,
+          path: 'backmedicalnewsUpdate',
+          name: 'BackmedicalnewsUpdate',
+          component: BackmedicalnewsUpdate,
           meta: {
             auth: true//添加字段判断该页面是否需要登录
           }
         },
         {
-          path: 'backyixuexinwenList',
-          name: 'BackyixuexinwenList',
-          component: BackyixuexinwenList,
+          path: 'backmedicalnewsList',
+          name: 'BackmedicalnewsList',
+          component: BackmedicalnewsList,
           meta: {
             auth: true//添加字段判断该页面是否需要登录
           }
         },
         {
-          path: 'backyixuexinwenAdd',
-          name: 'BackyixuexinwenAdd',
-          component: BackyixuexinwenAdd,
+          path: 'backmedicalnewsAdd',
+          name: 'BackmedicalnewsAdd',
+          component: BackmedicalnewsAdd,
           meta: {
             auth: true//添加字段判断该页面是否需要登录
           }
         },
         {
-          path: 'backyixuexinwenDetail',
-          name: 'BackyixuexinwenDetail',
-          component: BackyixuexinwenDetail,
+          path: 'backmedicalnewsDetail',
+          name: 'BackmedicalnewsDetail',
+          component: BackmedicalnewsDetail,
           meta: {
             auth: true//添加字段判断该页面是否需要登录
           }
         },
         {
-          path: 'backarticle_categoriesUpdate',
-          name: 'Backarticle_categoriesUpdate',
-          component: Backarticle_categoriesUpdate,
+          path: 'backarticlecategoriesUpdate',
+          name: 'BackarticlecategoriesUpdate',
+          component: BackarticlecategoriesUpdate,
           meta: {
             auth: true//添加字段判断该页面是否需要登录
           }
         },
         {
-          path: 'backarticle_categoriesList',
-          name: 'Backarticle_categoriesList',
-          component: Backarticle_categoriesList,
+          path: 'backarticlecategoriesList',
+          name: 'BackarticlecategoriesList',
+          component: BackarticlecategoriesList,
           meta: {
             auth: true//添加字段判断该页面是否需要登录
           }
         },
         {
-          path: 'backarticle_categoriesAdd',
-          name: 'Backarticle_categoriesAdd',
-          component: Backarticle_categoriesAdd,
+          path: 'backarticlecategoriesAdd',
+          name: 'BackarticlecategoriesAdd',
+          component: BackarticlecategoriesAdd,
           meta: {
             auth: true//添加字段判断该页面是否需要登录
           }
@@ -373,73 +373,73 @@ const router = new Router({
           }
         },
         {
-          path: 'backyouqinglianjieUpdate',
-          name: 'BackyouqinglianjieUpdate',
-          component: BackyouqinglianjieUpdate,
+          path: 'backlinkUpdate',
+          name: 'BacklinkUpdate',
+          component: BacklinkUpdate,
           meta: {
             auth: true//添加字段判断该页面是否需要登录
           }
         },
         {
-          path: 'backyouqinglianjieList',
-          name: 'BackyouqinglianjieList',
-          component: BackyouqinglianjieList,
+          path: 'backlinkList',
+          name: 'BacklinkList',
+          component: BacklinkList,
           meta: {
             auth: true//添加字段判断该页面是否需要登录
           }
         },
         {
-          path: 'backyouqinglianjieAdd',
-          name: 'BackyouqinglianjieAdd',
-          component: BackyouqinglianjieAdd,
+          path: 'backlinkAdd',
+          name: 'BacklinkAdd',
+          component: BacklinkAdd,
           meta: {
             auth: true//添加字段判断该页面是否需要登录
           }
         },
         {
-          path: 'backwenzhangpinglunList',
-          name: 'BackwenzhangpinglunList',
-          component: BackwenzhangpinglunList,
+          path: 'backarticlereviewList',
+          name: 'BackarticlereviewList',
+          component: BackarticlereviewList,
           meta: {
             auth: true//添加字段判断该页面是否需要登录
           }
         },
         {
-          path: 'backwenzhangxiugaiweishenheDetail',
-          name: 'BackwenzhangxiugaiweishenheDetail',
-          component: BackwenzhangxiugaiweishenheDetail,
+          path: 'backarticlerevisionunauditedDetail',
+          name: 'BackarticlerevisionunauditedDetail',
+          component: BackarticlerevisionunauditedDetail,
           meta: {
             auth: true//添加字段判断该页面是否需要登录
           }
         },
         {
-          path: 'backwenzhangxiugaiweishenheList',
-          name: 'BackwenzhangxiugaiweishenheList',
-          component: BackwenzhangxiugaiweishenheList,
+          path: 'backarticlerevisionunauditedList',
+          name: 'BackarticlerevisionunauditedList',
+          component: BackarticlerevisionunauditedList,
           meta: {
             auth: true//添加字段判断该页面是否需要登录
           }
         },
         {
-          path: 'backwenzhangxiugaiyishenheDetail',
-          name: 'BackwenzhangxiugaiyishenheDetail',
-          component: BackwenzhangxiugaiyishenheDetail,
+          path: 'backarticlerevisionauditedDetail',
+          name: 'BackarticlerevisionauditedDetail',
+          component: BackarticlerevisionauditedDetail,
           meta: {
             auth: true//添加字段判断该页面是否需要登录
           }
         },
         {
-          path: 'backwenzhangxiugaiyishenheList',
-          name: 'BackwenzhangxiugaiyishenheList',
-          component: BackwenzhangxiugaiyishenheList,
+          path: 'backarticlerevisionauditedList',
+          name: 'BackarticlerevisionauditedList',
+          component: BackarticlerevisionauditedList,
           meta: {
             auth: true//添加字段判断该页面是否需要登录
           }
         },
         {
-          path: 'backxitongUpdate',
-          name: 'BackxitongUpdate',
-          component: BackxitongUpdate,
+          path: 'backsystemUpdate',
+          name: 'BacksystemUpdate',
+          component: BacksystemUpdate,
           meta: {
             auth: true//添加字段判断该页面是否需要登录
           }
@@ -481,7 +481,7 @@ router.beforeEach((to, from, next) => {
       // 否则跳转到login登录页面
       alert("请先登录")
       next({
-        path: '/frontHome/frontInfo/frontyonghuzhongxinLogin',
+        path: '/frontHome/frontInfo/frontusercenterLogin',
       })
     }
   } else {
