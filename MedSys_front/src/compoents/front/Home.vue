@@ -61,7 +61,7 @@
       <router-view></router-view>
     </div>
     <div style="margin-top: 20px">
-      <img src="../../../../../../MedSys/MedSys_front/src/assets/foot.png">
+      <img src="../../assets/foot.png">
     </div>
   </div>
 </template>
@@ -79,10 +79,10 @@
     },
     methods: {
       faBufarticle(){
-        this.$router.push('/frontHome/frontusercenterUserbackgroundIndex/frontusercenterUserbackgroundPublicArticle')
+        this.$router.push('/frontHome/frontusercenteruserbackgroundIndex/frontusercenteruserbackgroundPublicArticle')
       },
       tousercenter() {
-        this.$router.push('/frontHome/frontusercenterUserbackgroundIndex')
+        this.$router.push('/frontHome/frontusercenteruserbackgroundIndex')
       },
       toAdmin() {
         this.$router.push('/backLogin')

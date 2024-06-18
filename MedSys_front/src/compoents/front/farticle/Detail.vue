@@ -112,7 +112,7 @@
     },
     methods: {
       toUpdate() {
-        this.$router.push('/frontHome/frontUserCenterUserbackgroundIndex/frontUserCenterUserbackgroundUpdateArticle?article=' +
+        this.$router.push('/frontHome/frontUserCenteruserbackgroundIndex/frontUserCenteruserbackgroundUpdateArticle?article=' +
           JSON.stringify(this.article))
       },
       toPingLun() {
