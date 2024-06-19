@@ -6,7 +6,7 @@ import 'element-ui/lib/theme-chalk/index.css'
 import App from './App.vue'
 import axios from 'axios'
 import router from './router'
-import globalvariable from './components/global_variable'
+import globalvariable from './compoents/global_variable'
 
 Vue.prototype.$baseVar = globalvariable
 
