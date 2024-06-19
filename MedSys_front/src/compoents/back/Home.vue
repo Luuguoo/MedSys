@@ -22,7 +22,7 @@
                 </td>
               </tr>
             </table>
-            <div slot="reference" style="margin-top: 12px;margin-left: -30px">
+            <div slot="reference" style="margin-top: 15px;margin-left: -2px">
               <el-row>
                 {{lname}}
               </el-row>
