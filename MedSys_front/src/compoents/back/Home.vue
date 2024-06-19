@@ -151,7 +151,7 @@
           <div style="float: left">Powered by 医学百科管理平台</div>
           <div style="float: right;">当前时间：{{time}}</div>
           <div style="margin-top: 20px">
-            <img src="../../../../../../MedSys/MedSys_front/src/assets/foot.png">
+<!--            <img src="../../../../../../MedSys/MedSys_front/src/assets/foot.png">-->
           </div>
         </el-footer>
       </el-container>

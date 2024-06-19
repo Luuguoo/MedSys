@@ -196,14 +196,14 @@
 
 <style scoped>
   .zishen {
-    font-size: 1px;
+    font-size: 13px;
     padding: 3px;
     color: white;
     background-color: #FD0201;
     font-weight:bold
   }
   .guanfang {
-    font-size: 1px;
+    font-size: 13px;
     padding: 3px;
     background-color: #FFDE66;
     color: red;

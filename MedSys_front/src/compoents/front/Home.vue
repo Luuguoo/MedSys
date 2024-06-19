@@ -45,13 +45,13 @@
         <el-col :span="24" style="background-color: #00BCD4">
           <div style="margin: 15px">
             <span @click="toIndex()" class="daohang"
-                  style="color: white;font-size: 15px;padding: 15px 40px;">网站首页</span>
-            <span @click="toXinWenLieBiao()" class="daohang" style="color: white;font-size: 15px;padding: 15px 40px;">医学新闻</span>
+                  style="color: white;font-size: 15px;padding: 15px 38px;">网站首页</span>
+            <span @click="toXinWenLieBiao()" class="daohang" style="color: white;font-size: 15px;padding: 15px 38px;">医学新闻</span>
             <span @click="tofarticleLieBiao(fenLei.tid)" class="daohang"
-                  style="color: white;font-size: 15px;padding: 15px 40px;" :key="index"
+                  style="color: white;font-size: 15px;padding: 15px 38px;" :key="index"
                   v-for="(fenLei,index) in fenLeiList">{{fenLei.tname}} </span>
-            <span @click="tousercenter()" class="daohang" style="color: white;font-size: 15px;padding: 15px 40px;">用户中心</span>
-            <span @click="toAdmin()" class="daohang" style="color: white;font-size: 15px;padding: 15px 40px;">管理员中心</span>
+            <span @click="tousercenter()" class="daohang" style="color: white;font-size: 15px;padding: 15px 38px;">用户中心</span>
+            <span @click="toAdmin()" class="daohang" style="color: white;font-size: 15px;padding: 15px 38px;">管理员中心</span>
           </div>
 
         </el-col>
@@ -61,7 +61,7 @@
       <router-view></router-view>
     </div>
     <div style="margin-top: 20px">
-      <img src="../../assets/foot.png">
+<!--      <img src="../../assets/foot.png">-->
     </div>
   </div>
 </template>

@@ -91,12 +91,12 @@ const router = new Router({
           component: FrontInfo,
           children: [
             {
-              path: 'frontmedicalnewsList',
+              path: 'frontfmedicalnewsList',
               name: 'FrontfmedicalnewsList',
               component: FrontfmedicalnewsList
             },
             {
-              path: 'frontmedicalnewsDetail',
+              path: 'frontfmedicalnewsDetail',
               name: 'FrontfmedicalnewsDetail',
               component: FrontfmedicalnewsDetail
             },

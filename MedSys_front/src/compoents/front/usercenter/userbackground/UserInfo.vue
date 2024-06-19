@@ -211,7 +211,7 @@
 
 
   .vip {
-    font-size: 1px;
+    font-size: 13px;
     padding: 3px;
     color: white;
     background-image: radial-gradient(darkorchid, red, gold);
