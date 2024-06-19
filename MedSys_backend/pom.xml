@@ -61,7 +61,6 @@
             <version>2.6.12</version>
         </dependency>
 
-        <!-- 阿里云json包，必选 -->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
