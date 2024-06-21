@@ -28,8 +28,8 @@ public class RecordsServiceImpl implements RecordsService {
   private UsersMapper usersMapper;
 
   @Override
-  public Result getReSou() {
-    List<Records> list = recordsMapper.getReSou();
+  public Result getTrending() {
+    List<Records> list = recordsMapper.getTrending();
     return Result.builder().code(1).data(list).msg("查询成功").build();
   }
 
@@ -41,7 +41,7 @@ public class RecordsServiceImpl implements RecordsService {
 
   @Override
   public void download(HttpServletRequest request, HttpServletResponse response) {
-    List<Records> list = recordsMapper.getReSou();
+    List<Records> list = recordsMapper.getTrending();
     Users users = (Users) request.getSession().getAttribute("users");
     if (users.getLevel()!=1) {
       log.error("{}，该用户没有访问权限",users.getLname());

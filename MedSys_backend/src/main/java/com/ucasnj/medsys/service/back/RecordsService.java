@@ -5,7 +5,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public interface RecordsService {
-  Result getReSou();
+  Result getTrending();
 
   Result add(String name);
 

@@ -133,8 +133,8 @@
         });
       },
 
-      getReSou() {
-        this.$axios.get("front/publics/records/getReSou")
+      getTrending() {
+        this.$axios.get("front/publics/records/getTrending")
           .then(resp => {
             this.reSouList = resp.data.data
           })
@@ -156,7 +156,7 @@
         }
       },
       load() {
-        this.getReSou()
+        this.getTrending()
         this.getFenLei()
         this.seeLoginStatus()
       }

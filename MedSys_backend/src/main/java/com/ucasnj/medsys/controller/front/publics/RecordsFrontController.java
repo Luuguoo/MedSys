@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class RecordsFrontController {
   @Autowired private RecordsService recordsService;
 
-  @GetMapping("/getReSou")
-  public Result getReSou() {
-    return recordsService.getReSou();
+  @GetMapping("/getTrending")
+  public Result getTrending() {
+    return recordsService.getTrending();
   }
   @GetMapping("/add")
   public Result add(String name){

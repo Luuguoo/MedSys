@@ -95,8 +95,8 @@
         this.$router.push('/frontHome/frontInfo/frontfarticleDetail?article=' + JSON.stringify(article))
 
       },
-      getReSou() {
-        this.$axios.get("front/publics/records/getReSou")
+      getTrending() {
+        this.$axios.get("front/publics/records/getTrending")
           .then(resp => {
             this.reSouList = resp.data.data
           })
@@ -113,7 +113,7 @@
 
     },
     created() {
-      this.getReSou()
+      this.getTrending()
       this.getArticleTop6()
     }
   }

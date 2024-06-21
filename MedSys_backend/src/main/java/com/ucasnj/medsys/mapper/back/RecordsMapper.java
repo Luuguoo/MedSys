@@ -8,7 +8,7 @@ import java.util.List;
 @Repository
 @Mapper
 public interface RecordsMapper {
-    List<Records> getReSou();
+    List<Records> getTrending();
 
     void add(String name);
 
