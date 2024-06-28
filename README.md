@@ -4,7 +4,7 @@
 
 框架：SpringBoot+Vue
 
-数据库：mysql
+数据库：MySQL
 
 ### 二、安装
 
