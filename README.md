@@ -2,7 +2,7 @@
 
 ### 一、相关技术
 
-框架：SpringBoot+VUE
+框架：SpringBoot+Vue
 
 数据库：mysql
 
