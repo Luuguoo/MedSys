@@ -29,8 +29,7 @@ public class ArticleController {
   }
 
   @GetMapping("/list")
-  public Result list(Integer curPage, String flag, Integer tid, String title, String lname,
-      Integer pageSize) {
+  public Result list(Integer curPage, String flag, Integer tid, String title, String lname, Integer pageSize) {
     return articleService.list(curPage, flag, tid, title, lname, pageSize);
   }
 
@@ -63,6 +62,8 @@ public class ArticleController {
     }
     return articleService.update(article);
   }
+
+
   @PostMapping("/add")
   public Result add(Article article, MultipartFile tupian) {
     File path = new File(ConstantUtils.imagePath + "upload/");
@@ -71,7 +72,10 @@ public class ArticleController {
     }
     String filename = tupian.getOriginalFilename();
     String exName = filename.substring(filename.lastIndexOf("."));
+    //UUID
     filename = UUID.randomUUID().toString().replaceAll("-", "") + exName;
+    // 使用时间戳生成文件名
+    //filename = System.currentTimeMillis() + exName;
 
     File file = new File(path, filename);
     try {
@@ -89,5 +93,4 @@ public class ArticleController {
       return Result.builder().code(2).msg("添加失败").build();
     }
   }
-
 }
