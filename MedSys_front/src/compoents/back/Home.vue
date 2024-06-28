@@ -33,7 +33,7 @@
           </el-popover>
         </el-col>
         <el-col :span="21">
-          <h1>欢迎来到医学百科管理平台</h1>
+          <h1>欢迎来到医学知识科普平台</h1>
         </el-col>
         <el-col :span="1">
           <i class="el-icon-full-screen" style="margin-top: 19px" @click="logout">退出</i>
@@ -148,7 +148,7 @@
           <router-view></router-view>
         </el-main>
         <el-footer>
-          <div style="float: left">Powered by 医学百科管理平台</div>
+          <div style="float: left">Powered by 医学知识科普平台</div>
           <div style="float: right;">当前时间：{{time}}</div>
           <div style="margin-top: 20px">
 <!--            <img src="../../../../../../MedSys/MedSys_front/src/assets/foot.png">-->

@@ -2,7 +2,7 @@
   <div>
     <img width="100%" height="940px" :src='backImg'>
     <div id="main">
-      <h1 style="font-size: 40px;margin-bottom: 100px;color: white">医学百科管理平台</h1>
+      <h1 style="font-size: 40px;margin-bottom: 100px;color: white">医学知识科普平台</h1>
       <el-card class="box-card" style="border-radius: 20px;">
         <h2>请登录</h2>
         <el-form ref="form" :model="admin" :rules="rules" label-width="100px" label-position="right"

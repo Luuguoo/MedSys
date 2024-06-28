@@ -3,15 +3,15 @@
     <div>
       <el-row>
         <el-col :span="4" :offset="4" style="text-align: left">
-          <span style="font-size: 13px;color: #747D87">医学百科管理平台，欢迎您的到来！</span>
+          <span style="font-size: 15px;color: #747D87">医学知识科普平台，欢迎您的到来！</span>
         </el-col>
-        <el-col :span="3" :offset="9" style="text-align: right">
+        <el-col :span="4" :offset="11" style="text-align: right">
           <div v-if="!isLogin">
             <el-button plain size="mini" @click="toRegister()">用户注册</el-button>
             <el-button plain type="danger" size="mini" @click="toLogin()">用户登录</el-button>
           </div>
           <div v-if="isLogin">
-            欢迎你，{{username}}
+            欢迎您，{{username}}
             <el-button plain type="danger" size="mini" @click="logout()">退出登录</el-button>
           </div>
         </el-col>
@@ -19,7 +19,7 @@
       <hr>
       <el-row>
         <el-col :span="4" :offset="4" style="text-align: left">
-          <span @click="toIndex()" style="font-size: 30px;color: #00BCD4">医学百科管理平台</span>
+          <span @click="toIndex()" style="font-size: 30px;color: #00BCD4">医学知识科普平台</span>
         </el-col>
         <el-col :span="10" :offset="2">
           <el-row>
