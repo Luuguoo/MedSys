@@ -112,6 +112,10 @@ INSERT INTO `atype` VALUES (3, '常用治疗', 1);
 INSERT INTO `atype` VALUES (4, '常见中医', 0);
 INSERT INTO `atype` VALUES (5, '常见预防', 0);
 INSERT INTO `atype` VALUES (6, '常用护理', 1);
+INSERT INTO `atype` VALUES (7, '药品知识', 0);
+INSERT INTO `atype` VALUES (8, '健康饮食', 0);
+INSERT INTO `atype` VALUES (9, '心理健康', 0);
+INSERT INTO `atype` VALUES (10, '急救常识', 0);
 
 -- ----------------------------
 -- Table structure for collect

@@ -46,9 +46,9 @@
               trigger: 'blur'
             },
             {
-              min: 4,
+              min: 2,
               max: 20,
-              message: '类别名称长度在4到20字符之间',
+              message: '类别名称长度在2到20字符之间',
               trigger: 'blur'
             }
           ],

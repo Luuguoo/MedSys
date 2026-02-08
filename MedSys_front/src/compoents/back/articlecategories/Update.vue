@@ -2,7 +2,7 @@
   <div>
     <el-card class="box-card" shadow="always" style="border-radius: 20px;">
       <div slot="header" class="clearfix">
-        <p align="left" style="font-size: 20px">修改医学新闻信息</p>
+        <p align="left" style="font-size: 20px">修改文章分类信息</p>
       </div>
       <div style="min-height: 600px">
         <el-form ref="form" :model="atype" :rules="rules" label-width="100px" label-position="right" size="mini">
@@ -47,9 +47,9 @@
               trigger: 'blur'
             },
             {
-              min: 4,
+              min: 2,
               max: 20,
-              message: '类别名称长度在4到20字符之间',
+              message: '类别名称长度在2到20字符之间',
               trigger: 'blur'
             }
           ],
