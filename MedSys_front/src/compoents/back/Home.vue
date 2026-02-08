@@ -86,8 +86,8 @@
                   <span>文章分类管理</span>
                 </template>
                 <el-menu-item-group>
-                  <el-menu-item index="3-1" @click="articlecategoriesAdd">添加文件分类</el-menu-item>
-                  <el-menu-item index="3-2" @click="articlecategoriesList">管理文件分类</el-menu-item>
+                  <el-menu-item index="3-1" @click="articlecategoriesAdd">添加文章分类</el-menu-item>
+                  <el-menu-item index="3-2" @click="articlecategoriesList">管理文章分类</el-menu-item>
                 </el-menu-item-group>
               </el-submenu>
               <el-submenu index="4">
